@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity hacell is
+  port ( a,b: in std_logic_vector( 1 downto 0);
+         c,s   : out std_logic);
+end hacell;
+
+architecture structural of hacell is
+  component ha is
+  port ( a,b : in std_logic;
+         c,s   : out std_logic);
+  end component;
+  component and2 is
+    Port ( a,b : in std_logic;
+           y : out std_logic);
+  end component;
+  signal x1,x2: std_logic;
+begin
+  u1:and2 port map(a => a(0), b=> b(1), y=> x1); 
+  u2:and2 port map(a => a(1), b=> b(0), y=> x2); 
+  u3:ha   port map(a => x1,b => x2,c => c, s => s);
+end structural;

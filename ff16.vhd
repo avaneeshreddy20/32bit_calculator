@@ -1,0 +1,20 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity ff16 is
+  port ( a : in std_logic_vector( 15 downto 0);
+         load,clear,clock : in std_logic;
+         z : out std_logic_vector( 15 downto 0) );
+end ff16;
+architecture behavioural of ff16 is
+begin
+  process(clear,clock)
+    begin
+  if (clear = '1') then
+    z <= "0000000000000000" ;
+  elsif (rising_edge(clock)) then
+   if ( load = '1' ) then 
+  z <= a;
+end if;
+  end if;
+  end process;
+end behavioural;
