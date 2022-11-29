@@ -41,11 +41,12 @@ architecture structural of top_8bit is
   begin
     u01: ff8 port map(a => x,load => load,clear =>clear,clock =>clock,z => x1);
     u02: ff8 port map(a => y,load => load,clear =>clear,clock =>clock,z => x2);
-    u03: multiplier port map(a => x1,b => x2, c =>x3);
-    u04: ff16 port map(a => x3,load => load,clear =>clear,clock =>clock,z => x4);
+  ----  u03: multiplier port map(a => x1,b => x2, c =>x3);
+    u03: multiplier port map(a => x1,b => x2, c =>x4);
+  ---  u04: ff16 port map(a => x3,load => load,clear =>clear,clock =>clock,z => x4);
     u05: divider port map(a => x4,c =>x5);
-    u06: ff16 port map(a => x5,load => load,clear =>clear,clock =>clock,z => x6);
-    u07: adder port map(a => x6,c =>x8);
+  ---  u06: ff16 port map(a => x5,load => load,clear =>clear,clock =>clock,z => x6);
+    u07: adder port map(a => x5,c =>x8);
     u08: ff16 port map(a => x8,load => load,clear =>clear,clock =>clock,z => z);
       
 end structural;
