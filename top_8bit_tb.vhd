@@ -28,7 +28,7 @@ end component;
       y <= "00000000"   ;
       load <= '1';
       clear <= '1';
-      wait for 40ns;
+      wait for 10ns;
       x <= "00000101"   ;
       y <= "00000101"   ;
       load <= '1';
@@ -57,7 +57,7 @@ end component;
       x <= "00000110"   ;
       y <= "00000110"   ;
       load <= '1';
-      clear <= '1';
+      clear <= '0';
       wait for 40ns;
       x <= "00000111"   ;
       y <= "00000111"   ;
@@ -65,6 +65,27 @@ end component;
       clear <= '0';
       wait for 40ns;
     end process;
-    
+  
+  process
+    variable error_status: boolean;
+    begin
+      wait on x;
+      wait for 20ns;
+      if ((x ="00000000" and y = "00000000" and z="0000000000000000" )or
+          (x ="00000000" and y = "00000000" and z="0000000000000111" )or
+          (x ="00000010" and y = "00000010" and z="0000000000000010" )or
+          (x ="00000011" and y = "00000011" and z="0000000000000011" )or
+          (x ="00000100" and y = "00000100" and z="0000000000000101" )or
+          (x ="00000101" and y = "00000101" and z="0000000000000000" )or
+          (x ="00000110" and y = "00000110" and z="0000000000000000" )or
+          (x ="00000111" and y = "00000111" and z="0000000000001101" ))
+      then error_status:= false;
+    else error_status:= true;
+    end if;
+    assert not error_status
+       report "test failed."
+       severity note;
+     end process;
+     
 end behaviour;
 

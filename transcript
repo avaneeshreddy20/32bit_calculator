@@ -74,3 +74,390 @@ run
 run
 run
 quit -sim
+# Compile of t_register_32.vhd failed with 1 errors.
+# Compile of t_register_32.vhd failed with 1 errors.
+# Compile of and2.vhd was successful.
+# Compile of xor2.vhd was successful.
+# Compile of ha.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of or2.vhd was successful.
+# Compile of fa_tb.vhd was successful with warnings.
+# Compile of 8bit_multiplier.vhd was successful.
+# Compile of hacell.vhd was successful.
+# Compile of hacell2.vhd was successful.
+# Compile of facell.vhd was successful.
+# Compile of facell2.vhd was successful.
+# Compile of multiplier_tb.vhd was successful with warnings.
+# Compile of adder.vhd was successful.
+# Compile of adder_tb.vhd was successful with warnings.
+# Compile of divider.vhd was successful.
+# Compile of divider_tb.vhd was successful with warnings.
+# Compile of ff8.vhd was successful.
+# Compile of ff16.vhd was successful.
+# Compile of top_8bit.vhd was successful.
+# Compile of top_8bit_tb.vhd was successful with warnings.
+# Compile of 16bit_multiplier.vhd was successful.
+# Compile of adder_24.vhd was successful.
+# Compile of adder_16.vhd was successful.
+# Compile of 16bit_multi_tb.vhd was successful with warnings.
+# Compile of divider2.vhd was successful.
+# Compile of divider2_tb.vhd was successful with warnings.
+# Compile of adder2.vhd was successful.
+# Compile of adder2_tb.vhd was successful with warnings.
+# Compile of top_16bit.vhd was successful.
+# Compile of ff32.vhd was successful.
+# Compile of top_16bit_tb.vhd was successful with warnings.
+# Compile of ff8_tb.vhd was successful with warnings.
+# Compile of t_register.vhd was successful.
+# Compile of t_register_tb.vhd was successful with warnings.
+# Compile of flag_component.vhd was successful.
+# Compile of flag_component_tb.vhd was successful with warnings.
+# Compile of ff.vhd was successful.
+# Compile of t_register_32.vhd failed with 1 errors.
+# 38 compiles, 1 failed with 1 error. 
+vsim -voptargs=+acc work.fa_tb
+# vsim -voptargs=+acc work.fa_tb 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.fa_tb(behaviour)#1
+# Loading work.fa(structural)#1
+# Loading work.xor2(behavioural)#1
+# Loading work.and2(behavioral)#1
+# Loading work.or2(behavioural)#1
+add wave sim:/fa_tb/*
+run
+run
+run
+run
+run
+run
+# ** Note: test failed.
+#    Time: 60 ns  Iteration: 0  Instance: /fa_tb
+run
+run
+run
+quit -sim
+# Compile of t_register_32.vhd failed with 1 errors.
+# Compile of t_register_32.vhd failed with 1 errors.
+# Compile of t_register_32.vhd failed with 2 errors.
+# Compile of t_register_32.vhd failed with 1 errors.
+# Compile of t_register_32.vhd was successful.
+# Compile of flag_component32.vhd was successful.
+# Compile of top_16bit.vhd failed with 1 errors.
+# Compile of top_16bit.vhd was successful.
+# Compile of top_16bit_tb.vhd failed with 2 errors.
+# Compile of top_16bit_tb.vhd was successful with warnings.
+# Compile of top_8bit_tb.vhd was successful with warnings.
+vsim -voptargs=+acc work.top_8bit_tb
+# vsim -voptargs=+acc work.top_8bit_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.top_8bit_tb(behaviour)#1
+# Loading work.top_8bit(structural)#1
+# Loading work.ff8(behavioural)#1
+# Loading work.multiplier(structural)#1
+# Loading work.and2(behavioral)#1
+# Loading work.hacell(structural)#1
+# Loading work.ha(behavioural)#1
+# Loading work.xor2(behavioural)#1
+# Loading work.facell(structural)#1
+# Loading work.fa(structural)#1
+# Loading work.or2(behavioural)#1
+# Loading work.hacell2(structural)#1
+# Loading work.facell2(structural)#1
+# Loading work.divider(structural)#1
+# Loading work.adder(structural)#1
+# Loading work.ff16(behavioural)#1
+# Loading work.flag_component(behavioral)#1
+# Loading work.t_register(behavioral)#1
+# Loading work.ff(behavioural)#1
+add wave sim:/top_8bit_tb/*
+run
+run
+run
+run
+run
+# ** Note: test failed.
+#    Time: 50 ns  Iteration: 0  Instance: /top_8bit_tb
+run
+run
+run
+run
+# ** Note: test failed.
+#    Time: 90 ns  Iteration: 0  Instance: /top_8bit_tb
+run
+run
+run
+run
+# ** Note: test failed.
+#    Time: 130 ns  Iteration: 0  Instance: /top_8bit_tb
+run
+run
+# Compile of top_8bit_tb.vhd was successful with warnings.
+quit -sim
+vsim -voptargs=+acc work.top_8bit_tb
+# vsim -voptargs=+acc work.top_8bit_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.top_8bit_tb(behaviour)#1
+# Loading work.top_8bit(structural)#1
+# Loading work.ff8(behavioural)#1
+# Loading work.multiplier(structural)#1
+# Loading work.and2(behavioral)#1
+# Loading work.hacell(structural)#1
+# Loading work.ha(behavioural)#1
+# Loading work.xor2(behavioural)#1
+# Loading work.facell(structural)#1
+# Loading work.fa(structural)#1
+# Loading work.or2(behavioural)#1
+# Loading work.hacell2(structural)#1
+# Loading work.facell2(structural)#1
+# Loading work.divider(structural)#1
+# Loading work.adder(structural)#1
+# Loading work.ff16(behavioural)#1
+# Loading work.flag_component(behavioral)#1
+# Loading work.t_register(behavioral)#1
+# Loading work.ff(behavioural)#1
+add wave sim:/top_8bit_tb/*
+run
+# ** Note: test failed.
+#    Time: 10 ns  Iteration: 0  Instance: /top_8bit_tb
+run
+run
+# ** Note: test failed.
+#    Time: 30 ns  Iteration: 0  Instance: /top_8bit_tb
+run
+run
+run
+run
+# ** Note: test failed.
+#    Time: 70 ns  Iteration: 0  Instance: /top_8bit_tb
+run
+run
+run
+run
+# ** Note: test failed.
+#    Time: 110 ns  Iteration: 0  Instance: /top_8bit_tb
+run
+quit -sim
+# Compile of and2.vhd was successful.
+# Compile of xor2.vhd was successful.
+# Compile of ha.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of or2.vhd was successful.
+# Compile of fa_tb.vhd was successful with warnings.
+# Compile of 8bit_multiplier.vhd was successful.
+# Compile of hacell.vhd was successful.
+# Compile of hacell2.vhd was successful.
+# Compile of facell.vhd was successful.
+# Compile of facell2.vhd was successful.
+# Compile of multiplier_tb.vhd was successful with warnings.
+# Compile of adder.vhd was successful.
+# Compile of adder_tb.vhd was successful with warnings.
+# Compile of divider.vhd was successful.
+# Compile of divider_tb.vhd was successful with warnings.
+# Compile of ff8.vhd was successful.
+# Compile of ff16.vhd was successful.
+# Compile of top_8bit.vhd was successful.
+# Compile of top_8bit_tb.vhd was successful with warnings.
+# Compile of 16bit_multiplier.vhd was successful.
+# Compile of adder_24.vhd was successful.
+# Compile of adder_16.vhd was successful.
+# Compile of 16bit_multi_tb.vhd was successful with warnings.
+# Compile of divider2.vhd was successful.
+# Compile of divider2_tb.vhd was successful with warnings.
+# Compile of adder2.vhd was successful.
+# Compile of adder2_tb.vhd was successful with warnings.
+# Compile of top_16bit.vhd was successful.
+# Compile of ff32.vhd was successful.
+# Compile of top_16bit_tb.vhd was successful with warnings.
+# Compile of ff8_tb.vhd was successful with warnings.
+# Compile of t_register.vhd was successful.
+# Compile of t_register_tb.vhd was successful with warnings.
+# Compile of flag_component.vhd was successful.
+# Compile of flag_component_tb.vhd was successful with warnings.
+# Compile of ff.vhd was successful.
+# Compile of t_register_32.vhd was successful.
+# Compile of flag_component32.vhd was successful.
+# 39 compiles, 0 failed with no errors. 
+# Compile of top_8bit_tb.vhd was successful with warnings.
+vsim -voptargs=+acc work.top_8bit_tb
+# vsim -voptargs=+acc work.top_8bit_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.top_8bit_tb(behaviour)#1
+# Loading work.top_8bit(structural)#1
+# Loading work.ff8(behavioural)#1
+# Loading work.multiplier(structural)#1
+# Loading work.and2(behavioral)#1
+# Loading work.hacell(structural)#1
+# Loading work.ha(behavioural)#1
+# Loading work.xor2(behavioural)#1
+# Loading work.facell(structural)#1
+# Loading work.fa(structural)#1
+# Loading work.or2(behavioural)#1
+# Loading work.hacell2(structural)#1
+# Loading work.facell2(structural)#1
+# Loading work.divider(structural)#1
+# Loading work.adder(structural)#1
+# Loading work.ff16(behavioural)#1
+# Loading work.flag_component(behavioral)#1
+# Loading work.t_register(behavioral)#1
+# Loading work.ff(behavioural)#1
+add wave sim:/top_8bit_tb/*
+run
+# ** Note: test failed.
+#    Time: 10 ns  Iteration: 0  Instance: /top_8bit_tb
+run
+run
+# ** Note: test failed.
+#    Time: 30 ns  Iteration: 0  Instance: /top_8bit_tb
+run
+run
+quit -sim
+# Compile of top_8bit_tb.vhd failed with 1 errors.
+# Compile of top_8bit_tb.vhd was successful with warnings.
+vsim -voptargs=+acc work.top_8bit_tb
+# vsim -voptargs=+acc work.top_8bit_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.top_8bit_tb(behaviour)#1
+# Loading work.top_8bit(structural)#1
+# Loading work.ff8(behavioural)#1
+# Loading work.multiplier(structural)#1
+# Loading work.and2(behavioral)#1
+# Loading work.hacell(structural)#1
+# Loading work.ha(behavioural)#1
+# Loading work.xor2(behavioural)#1
+# Loading work.facell(structural)#1
+# Loading work.fa(structural)#1
+# Loading work.or2(behavioural)#1
+# Loading work.hacell2(structural)#1
+# Loading work.facell2(structural)#1
+# Loading work.divider(structural)#1
+# Loading work.adder(structural)#1
+# Loading work.ff16(behavioural)#1
+# Loading work.flag_component(behavioral)#1
+# Loading work.t_register(behavioral)#1
+# Loading work.ff(behavioural)#1
+add wave sim:/top_8bit_tb/*
+run
+run
+run
+# ** Note: test failed.
+#    Time: 30 ns  Iteration: 0  Instance: /top_8bit_tb
+run
+run
+run
+run
+# ** Note: test failed.
+#    Time: 70 ns  Iteration: 0  Instance: /top_8bit_tb
+run
+run
+run
+run
+# ** Note: test failed.
+#    Time: 110 ns  Iteration: 0  Instance: /top_8bit_tb
+run
+quit -sim
+# Compile of top_8bit_tb.vhd failed with 1 errors.
+# Compile of top_8bit_tb.vhd failed with 1 errors.
+# Compile of top_8bit_tb.vhd failed with 1 errors.
+# Compile of top_8bit_tb.vhd was successful with warnings.
+# Compile of top_8bit_tb.vhd was successful with warnings.
+vsim -voptargs=+acc work.top_8bit_tb
+# vsim -voptargs=+acc work.top_8bit_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.top_8bit_tb(behaviour)#1
+# Loading work.top_8bit(structural)#1
+# Loading work.ff8(behavioural)#1
+# Loading work.multiplier(structural)#1
+# Loading work.and2(behavioral)#1
+# Loading work.hacell(structural)#1
+# Loading work.ha(behavioural)#1
+# Loading work.xor2(behavioural)#1
+# Loading work.facell(structural)#1
+# Loading work.fa(structural)#1
+# Loading work.or2(behavioural)#1
+# Loading work.hacell2(structural)#1
+# Loading work.facell2(structural)#1
+# Loading work.divider(structural)#1
+# Loading work.adder(structural)#1
+# Loading work.ff16(behavioural)#1
+# Loading work.flag_component(behavioral)#1
+# Loading work.t_register(behavioral)#1
+# Loading work.ff(behavioural)#1
+add wave sim:/top_8bit_tb/*
+run
+run
+# ** Note: test failed.
+#    Time: 20 ns  Iteration: 0  Instance: /top_8bit_tb
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# Compile of top_16bit_tb.vhd failed with 1 errors.
+# Compile of top_16bit_tb.vhd failed with 1 errors.
+# Compile of top_16bit_tb.vhd failed with 1 errors.
+# Compile of top_16bit_tb.vhd failed with 1 errors.
+# Compile of top_16bit_tb.vhd failed with 1 errors.
+# Compile of top_16bit_tb.vhd failed with 1 errors.
+# Compile of top_16bit_tb.vhd failed with 1 errors.
+# Compile of top_16bit_tb.vhd was successful with warnings.
+vsim -voptargs=+acc work.top_16bit_tb
+# vsim -voptargs=+acc work.top_16bit_tb 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.top_16bit_tb(behavioural)#1
+# Loading work.top_16bit(structural)#1
+# Loading work.ff16(behavioural)#1
+# Loading work.multiplier16(structural)#1
+# Loading work.multiplier(structural)#1
+# Loading work.and2(behavioral)#1
+# Loading work.hacell(structural)#1
+# Loading work.ha(behavioural)#1
+# Loading work.xor2(behavioural)#1
+# Loading work.facell(structural)#1
+# Loading work.fa(structural)#1
+# Loading work.or2(behavioural)#1
+# Loading work.hacell2(structural)#1
+# Loading work.facell2(structural)#1
+# Loading work.adder_24(structural)#1
+# Loading work.adder_16(structural)#1
+# Loading work.divider2(structural)#1
+# Loading work.adder2(structural)#1
+# Loading work.ff32(behavioural)#1
+# Loading work.flag_component32(behavioral)#1
+# Loading work.t_register_32(behavioral)#1
+# Loading work.ff(behavioural)#1
+add wave sim:/top_16bit_tb/*
+run
+run
+# ** Note: test failed.
+#    Time: 20 ns  Iteration: 0  Instance: /top_16bit_tb
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim

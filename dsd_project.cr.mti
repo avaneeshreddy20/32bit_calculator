@@ -220,6 +220,13 @@ Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
 -- Compiling entity t_register
 -- Compiling architecture behavioral of t_register
 
+} {} {}} /nfs/home/a/a_gadda/dsd/flag_component32.vhd {1 {vcom -work work -2002 -explicit -vopt /nfs/home/a/a_gadda/dsd/flag_component32.vhd
+Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity flag_component32
+-- Compiling architecture behavioral of flag_component32
+
 } {} {}} /nfs/home/a/a_gadda/dsd/hacell.vhd {1 {vcom -work work -2002 -explicit -vopt /nfs/home/a/a_gadda/dsd/hacell.vhd
 Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
 -- Loading package standard
@@ -265,6 +272,20 @@ Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
 -- Compiling entity hacell2
 -- Compiling architecture structural of hacell2
 
+} {} {}} /nfs/home/a/a_gadda/dsd/t_register_32.vhd {1 {vcom -work work -2002 -explicit -vopt /nfs/home/a/a_gadda/dsd/t_register_32.vhd
+Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity t_register_32
+-- Compiling architecture behavioral of t_register_32
+
+} {} {}} /nfs/home/a/a_gadda/dsd/flag_component.vhd {1 {vcom -work work -2002 -explicit -vopt /nfs/home/a/a_gadda/dsd/flag_component.vhd
+Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity flag_component
+-- Compiling architecture behavioral of flag_component
+
 } {} {}} /nfs/home/a/a_gadda/dsd/multiplier_tb.vhd {2 {vcom -work work -2002 -explicit -vopt /nfs/home/a/a_gadda/dsd/multiplier_tb.vhd
 Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
 -- Loading package standard
@@ -279,30 +300,6 @@ Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
 ** Warning: [4] /nfs/home/a/a_gadda/dsd/multiplier_tb.vhd(33): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 ** Warning: [4] /nfs/home/a/a_gadda/dsd/multiplier_tb.vhd(36): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 ** Warning: [4] /nfs/home/a/a_gadda/dsd/multiplier_tb.vhd(39): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-
-} {} {}} /nfs/home/a/a_gadda/dsd/top_16bit_tb.vhd {2 {vcom -work work -2002 -explicit -vopt /nfs/home/a/a_gadda/dsd/top_16bit_tb.vhd
-Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity top_16bit_tb
--- Compiling architecture behaviour of top_16bit_tb
-** Warning: [4] /nfs/home/a/a_gadda/dsd/top_16bit_tb.vhd(19): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: [4] /nfs/home/a/a_gadda/dsd/top_16bit_tb.vhd(21): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: [4] /nfs/home/a/a_gadda/dsd/top_16bit_tb.vhd(30): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: [4] /nfs/home/a/a_gadda/dsd/top_16bit_tb.vhd(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: [4] /nfs/home/a/a_gadda/dsd/top_16bit_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: [4] /nfs/home/a/a_gadda/dsd/top_16bit_tb.vhd(45): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: [4] /nfs/home/a/a_gadda/dsd/top_16bit_tb.vhd(50): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: [4] /nfs/home/a/a_gadda/dsd/top_16bit_tb.vhd(55): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: [4] /nfs/home/a/a_gadda/dsd/top_16bit_tb.vhd(60): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: [4] /nfs/home/a/a_gadda/dsd/top_16bit_tb.vhd(65): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-
-} {} {}} /nfs/home/a/a_gadda/dsd/adder_16.vhd {1 {vcom -work work -2002 -explicit -vopt /nfs/home/a/a_gadda/dsd/adder_16.vhd
-Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity adder_16
--- Compiling architecture structural of adder_16
 
 } {} {}} /nfs/home/a/a_gadda/dsd/top_8bit_tb.vhd {2 {vcom -work work -2002 -explicit -vopt /nfs/home/a/a_gadda/dsd/top_8bit_tb.vhd
 Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
@@ -320,6 +317,14 @@ Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
 ** Warning: [4] /nfs/home/a/a_gadda/dsd/top_8bit_tb.vhd(56): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 ** Warning: [4] /nfs/home/a/a_gadda/dsd/top_8bit_tb.vhd(61): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 ** Warning: [4] /nfs/home/a/a_gadda/dsd/top_8bit_tb.vhd(66): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: [4] /nfs/home/a/a_gadda/dsd/top_8bit_tb.vhd(73): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+
+} {} {}} /nfs/home/a/a_gadda/dsd/adder_16.vhd {1 {vcom -work work -2002 -explicit -vopt /nfs/home/a/a_gadda/dsd/adder_16.vhd
+Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity adder_16
+-- Compiling architecture structural of adder_16
 
 } {} {}} /nfs/home/a/a_gadda/dsd/divider.vhd {1 {vcom -work work -2002 -explicit -vopt /nfs/home/a/a_gadda/dsd/divider.vhd
 Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
