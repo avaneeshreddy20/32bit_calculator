@@ -1,0 +1,105 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity multiplier is
+  port ( a,b: in std_logic_vector( 7 downto 0);
+         c  : out std_logic_vector(15 downto 0));
+end multiplier;
+
+architecture structural of multiplier is
+component and2 is
+Port ( a,b : in std_logic;
+         y : out std_logic);
+end component;
+
+component hacell is
+  port ( a,b: in std_logic_vector( 1 downto 0);
+         c,s   : out std_logic);
+end component;
+
+component facell is
+  port ( a,b: in std_logic_vector( 1 downto 0);
+         cin: in std_logic;
+         cout,s   : out std_logic);
+end component;
+
+component hacell2 is
+  port ( a,b,cin: in std_logic;
+         c,s   : out std_logic);
+end component;
+
+component facell2 is
+  port ( a,b,c: in std_logic;
+         cin: in std_logic;
+         cout,s   : out std_logic);
+end component;
+
+signal m,m1,m2,m3,m4,m5: std_logic_vector( 6 downto 0);
+signal carry,carry1,carry2,carry3,carry4,carry5,carry6: std_logic_vector( 7 downto 0);
+
+begin
+  
+  a01: and2 port map (a =>a(0) ,b =>b(0) ,y =>c(0));
+  u00: hacell port map(a(0)=> a(0),a(1)=> a(1) ,b(0)=> b(0) ,b(1)=> b(1),c=> carry(0),s=> c(1));
+  u01: facell port map(a(0)=> a(0),a(1)=> a(1) ,b(0)=> b(1) ,b(1)=> b(2),cin=> carry(0),cout=> carry(1),s=> m(0));
+  u02: facell port map(a(0)=> a(0),a(1)=> a(1) ,b(0)=> b(2) ,b(1)=> b(3),cin=> carry(1),cout=> carry(2),s=> m(1));
+  u03: facell port map(a(0)=> a(0),a(1)=> a(1) ,b(0)=> b(3) ,b(1)=> b(4),cin=> carry(2),cout=> carry(3),s=> m(2));
+  u04: facell port map(a(0)=> a(0),a(1)=> a(1) ,b(0)=> b(4) ,b(1)=> b(5),cin=> carry(3),cout=> carry(4),s=> m(3));
+  u05: facell port map(a(0)=> a(0),a(1)=> a(1) ,b(0)=> b(5) ,b(1)=> b(6),cin=> carry(4),cout=> carry(5),s=> m(4));
+  u06: facell port map(a(0)=> a(0),a(1)=> a(1) ,b(0)=> b(6) ,b(1)=> b(7),cin=> carry(5),cout=> carry(6),s=> m(5));
+  u07: hacell2 port map(a=> a(1),b=> b(7) ,cin=> carry(6),c=> carry(7),s=> m(6)); 
+    
+  u10: hacell2 port map(a=> a(2),b=> b(0) ,cin=> m(0),c=> carry1(0),s=> c(2));
+  u11: facell2 port map(a=> a(2),b=> b(1) ,c=> m(1),cin=>carry1(0),cout=> carry1(1),s=> m1(0));
+  u12: facell2 port map(a=> a(2),b=> b(2) ,c=> m(2),cin=>carry1(1),cout=> carry1(2),s=> m1(1));
+  u13: facell2 port map(a=> a(2),b=> b(3) ,c=> m(3),cin=>carry1(2),cout=> carry1(3),s=> m1(2));
+  u14: facell2 port map(a=> a(2),b=> b(4) ,c=> m(4),cin=>carry1(3),cout=> carry1(4),s=> m1(3));
+  u15: facell2 port map(a=> a(2),b=> b(5) ,c=> m(5),cin=>carry1(4),cout=> carry1(5),s=> m1(4));
+  u16: facell2 port map(a=> a(2),b=> b(6) ,c=> m(6),cin=>carry1(5),cout=> carry1(6),s=> m1(5));
+  u17: facell2 port map(a=> a(2),b=> b(7) ,c=> m(7),cin=>carry1(6),cout=> carry1(7),s=> m1(6)); 
+    
+  u20: hacell2 port map(a=> a(3),b=> b(0) ,cin=> m1(0),c=> carry2(0),s=> c(3));
+  u21: facell2 port map(a=> a(3),b=> b(1) ,c=> m1(1),cin=>carry2(0),cout=> carry2(1),s=> m2(0));
+  u22: facell2 port map(a=> a(3),b=> b(2) ,c=> m1(2),cin=>carry2(1),cout=> carry2(2),s=> m2(1));
+  u23: facell2 port map(a=> a(3),b=> b(3) ,c=> m1(3),cin=>carry2(2),cout=> carry2(3),s=> m2(2));
+  u24: facell2 port map(a=> a(3),b=> b(4) ,c=> m1(4),cin=>carry2(3),cout=> carry2(4),s=> m2(3));
+  u25: facell2 port map(a=> a(3),b=> b(5) ,c=> m1(5),cin=>carry2(4),cout=> carry2(5),s=> m2(4));
+  u26: facell2 port map(a=> a(3),b=> b(6) ,c=> m1(6),cin=>carry2(5),cout=> carry2(6),s=> m2(5));
+  u27: facell2 port map(a=> a(3),b=> b(7) ,c=> m1(7),cin=>carry2(6),cout=> carry2(7),s=> m2(6));  
+    
+  u30: hacell2 port map(a=> a(4),b=> b(0) ,cin=> m2(0),c=> carry3(0),s=> c(4));
+  u31: facell2 port map(a=> a(4),b=> b(1) ,c=> m2(1),cin=>carry3(0),cout=> carry3(1),s=> m3(0));
+  u32: facell2 port map(a=> a(4),b=> b(2) ,c=> m2(2),cin=>carry3(1),cout=> carry3(2),s=> m3(1));
+  u33: facell2 port map(a=> a(4),b=> b(3) ,c=> m2(3),cin=>carry3(2),cout=> carry3(3),s=> m3(2));
+  u34: facell2 port map(a=> a(4),b=> b(4) ,c=> m2(4),cin=>carry3(3),cout=> carry3(4),s=> m3(3));
+  u35: facell2 port map(a=> a(4),b=> b(5) ,c=> m2(5),cin=>carry3(4),cout=> carry3(5),s=> m3(4));
+  u36: facell2 port map(a=> a(4),b=> b(6) ,c=> m2(6),cin=>carry3(5),cout=> carry3(6),s=> m3(5));
+  u37: facell2 port map(a=> a(4),b=> b(7) ,c=> m2(7),cin=>carry3(6),cout=> carry3(7),s=> m3(6)); 
+    
+  u40: hacell2 port map(a=> a(5),b=> b(0) ,cin=> m3(0),c=> carry4(0),s=> c(5));
+  u41: facell2 port map(a=> a(5),b=> b(1) ,c=> m3(1),cin=>carry4(0),cout=> carry4(1),s=> m4(0));
+  u42: facell2 port map(a=> a(5),b=> b(2) ,c=> m3(2),cin=>carry4(1),cout=> carry4(2),s=> m4(1));
+  u43: facell2 port map(a=> a(5),b=> b(3) ,c=> m3(3),cin=>carry4(2),cout=> carry4(3),s=> m4(2));
+  u44: facell2 port map(a=> a(5),b=> b(4) ,c=> m3(4),cin=>carry4(3),cout=> carry4(4),s=> m4(3));
+  u45: facell2 port map(a=> a(5),b=> b(5) ,c=> m3(5),cin=>carry4(4),cout=> carry4(5),s=> m4(4));
+  u46: facell2 port map(a=> a(5),b=> b(6) ,c=> m3(6),cin=>carry4(5),cout=> carry4(6),s=> m4(5));
+  u47: facell2 port map(a=> a(5),b=> b(7) ,c=> m3(7),cin=>carry4(6),cout=> carry4(7),s=> m4(6)); 
+    
+  u50: hacell2 port map(a=> a(6),b=> b(0) ,cin=> m4(0),c=> carry5(0),s=> c(6));
+  u51: facell2 port map(a=> a(6),b=> b(1) ,c=> m4(1),cin=>carry5(0),cout=> carry5(1),s=> m5(0));
+  u52: facell2 port map(a=> a(6),b=> b(2) ,c=> m4(2),cin=>carry5(1),cout=> carry5(2),s=> m5(1));
+  u53: facell2 port map(a=> a(6),b=> b(3) ,c=> m4(3),cin=>carry5(2),cout=> carry5(3),s=> m5(2));
+  u54: facell2 port map(a=> a(6),b=> b(4) ,c=> m4(4),cin=>carry5(3),cout=> carry5(4),s=> m5(3));
+  u55: facell2 port map(a=> a(6),b=> b(5) ,c=> m4(5),cin=>carry5(4),cout=> carry5(5),s=> m5(4));
+  u56: facell2 port map(a=> a(6),b=> b(6) ,c=> m4(6),cin=>carry5(5),cout=> carry5(6),s=> m5(5));
+  u57: facell2 port map(a=> a(6),b=> b(7) ,c=> m4(7),cin=>carry5(6),cout=> carry5(7),s=> m5(6)); 
+    
+  u60: hacell2 port map(a=> a(7),b=> b(0) ,cin=> m5(0),c=> carry6(0),s=> c(7));
+  u61: facell2 port map(a=> a(7),b=> b(1) ,c=> m5(1),cin=>carry6(0),cout=> carry6(1),s=> c(8));
+  u62: facell2 port map(a=> a(7),b=> b(2) ,c=> m5(2),cin=>carry6(1),cout=> carry6(2),s=> c(9));
+  u63: facell2 port map(a=> a(7),b=> b(3) ,c=> m5(3),cin=>carry6(2),cout=> carry6(3),s=> c(10));
+  u64: facell2 port map(a=> a(7),b=> b(4) ,c=> m5(4),cin=>carry6(3),cout=> carry6(4),s=> c(11));
+  u65: facell2 port map(a=> a(7),b=> b(5) ,c=> m5(5),cin=>carry6(4),cout=> carry6(5),s=> c(12));
+  u66: facell2 port map(a=> a(7),b=> b(6) ,c=> m5(6),cin=>carry6(5),cout=> carry6(6),s=> c(13));
+  u67: facell2 port map(a=> a(7),b=> b(7) ,c=> m5(7),cin=>carry6(6),cout=> c(15),s=> c(14)); 
+    
+  end structural;

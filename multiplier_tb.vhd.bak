@@ -1,16 +1,16 @@
 library ieee;
 use ieee.std_logic_1164.all;
-entity fa_tb is
-end fa_tb;
-architecture behaviour of fa_tb is
-  component fa is
-  port ( a,b,cin : in std_logic;
-         cout,s   : out std_logic);
+entity multiplier_tb is
+end multiplier_tb;
+architecture behaviour of multiplier_tb is
+  component multiplier is
+   port ( a,b: in std_logic_vector( 7 downto 0);
+         c  : out std_logic_vector(15 downto 0));
   end component;
-  signal x: std_logic_vector(2 downto 0);
-  signal y: std_logic_vector(1 downto 0);
+  signal x,y: std_logic_vector(7 downto 0);
+  signal z: std_logic_vector(15 downto 0);
   begin
-    u1:fa port map(a => x(0),b => x(1),cin => x(2),cout => y(1),s => y(0));
+    u1:multiplier port map(a => x,b => y,c => z);
   process
     begin
       x <= "000"   ;
@@ -41,7 +41,7 @@ architecture behaviour of fa_tb is
          (x ="010" and y = "01")or
          (x ="011" and y = "10")or
          (x ="100" and y = "01")or
-         (x ="101" and y = "11")or
+         (x ="101" and y = "10")or
          (x ="110" and y = "10")or
          (x ="111" and y = "11"))
      then error_status:= false;

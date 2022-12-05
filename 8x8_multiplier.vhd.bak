@@ -1,0 +1,11 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity XOR2 is
+  port ( x,y : in ;
+         z   : out );
+end XOR2;
+architecture behavioural of XOR2 is
+begin
+  z <= x xor y ;
+end behavioural;
+

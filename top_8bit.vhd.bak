@@ -55,7 +55,7 @@ architecture structural of top_8bit is
   ---  u06: ff16 port map(a => x5,load => load,clear =>clear,clock =>clock,z => x6);
     u07: adder port map(a => x5,c =>x8);
     u08: ff16 port map(a => x8,load => load,clear =>clear,clock =>clock,z => z);
-    u09: flag_component port map(T => x8,clock => clock,clear => clear,load =>load,end_flag => end_flag);
+    u09: flag_component port map(T => z,clock => clock,clear => clear,load =>load,end_flag => end_flag);
       
 end structural;
     

@@ -1,0 +1,76 @@
+# //  ModelSim SE-64 6.6g May 23 2012 Linux 3.10.0-1160.80.1.el7.x86_64
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading project dsd_project
+# 
+#  
+# Compile of flag_component.vhd was successful.
+# Compile of flag_component_tb.vhd was successful with warnings.
+vsim -voptargs=+acc work.flag_component_tb
+# vsim -voptargs=+acc work.flag_component_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.flag_component_tb(behaviour)#1
+# Loading work.flag_component(behavioral)#1
+# Loading work.t_register(behavioral)#1
+# Loading work.and2(behavioral)#1
+# Loading work.ff(behavioural)#1
+add wave sim:/flag_component_tb/*
+run
+run
+run
+run
+run
+add wave sim:/flag_component_tb/*
+quit -sim
+# Compile of top_8bit.vhd was successful.
+# Compile of top_8bit_tb.vhd was successful with warnings.
+vsim -voptargs=+acc work.top_8bit_tb
+# vsim -voptargs=+acc work.top_8bit_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.top_8bit_tb(behaviour)#1
+# Loading work.top_8bit(structural)#1
+# Loading work.ff8(behavioural)#1
+# Loading work.multiplier(structural)#1
+# Loading work.and2(behavioral)#1
+# Loading work.hacell(structural)#1
+# Loading work.ha(behavioural)#1
+# Loading work.xor2(behavioural)#1
+# Loading work.facell(structural)#1
+# Loading work.fa(structural)#1
+# Loading work.or2(behavioural)#1
+# Loading work.hacell2(structural)#1
+# Loading work.facell2(structural)#1
+# Loading work.divider(structural)#1
+# Loading work.adder(structural)#1
+# Loading work.ff16(behavioural)#1
+# Loading work.flag_component(behavioral)#1
+# Loading work.t_register(behavioral)#1
+# Loading work.ff(behavioural)#1
+add wave sim:/top_8bit_tb/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim

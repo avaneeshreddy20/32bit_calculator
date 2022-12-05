@@ -1,0 +1,33 @@
+entity AND2 is
+  port ( m,n : in std_logic;
+         o   : out std_logic);
+end AND2;
+architecture behavioural2 of AND2 is
+begin
+  process
+  o <= m and n ;
+end process;
+end behavioural2;
+
+
+entity HA is
+  port ( a,b : in std_logic;
+         s,c : out std_logic);
+end HA;
+architecture structural of HA is
+  
+  component XOR2 is
+    port ( x,y : in std_logic;
+           z   : out std_logic);
+  end XOR2;
+  
+  component AND2 is
+    port ( m,n : in std_logic;
+           o   : out std_logic);
+  end AND2;
+  signal p1, p2 : std_logic;
+  
+begin 
+  un1: XOR2 port map ( x => a , y => b , z => s );
+  un2: AND2 port map ( m => a , n => b , o => c );
+end HA;

@@ -41,7 +41,7 @@ architecture behaviour of fa_tb is
          (x ="010" and y = "01")or
          (x ="011" and y = "10")or
          (x ="100" and y = "01")or
-         (x ="101" and y = "11")or
+         (x ="101" and y = "10")or
          (x ="110" and y = "10")or
          (x ="111" and y = "11"))
      then error_status:= false;

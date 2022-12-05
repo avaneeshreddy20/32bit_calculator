@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity ff32 is
+  port ( a : in std_logic_vector( 31 downto 0);
+         load,clear,clock : in std_logic;
+         z : out std_logic_vector( 31 downto 0) );
+end ff32;
+architecture behavioural of ff32 is
+begin
+process(clock,load,clear)
+begin
+  if (rising_edge(clock)) then
+    if( (load ='1') and (clear ='0')) then
+  z <= a;
+else z <= "00000000000000000000000000000000";
+  end if;
+  end if;
+  end process;
+end behavioural;
